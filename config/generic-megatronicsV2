@@ -1,0 +1,74 @@
+[stepper_a]
+step_pin: PA4
+dir_pin: PA5
+enable_pin: !PA3
+microsteps: 16
+rotation_distance: 40
+endstop_pin: ^PG1
+homing_speed: 100
+position_endstop: 645.7
+arm_length: 502
+
+[stepper_b]
+step_pin: PG5
+dir_pin: PF0
+enable_pin: !PE3
+microsteps: 16
+rotation_distance: 40
+endstop_pin: ^PD7
+
+[stepper_c]
+step_pin: PF2
+dir_pin: PF6
+enable_pin: !PF1
+microsteps: 16
+rotation_distance: 40
+endstop_pin: ^PD2
+
+[gcode_arcs]
+resolution: 1.0
+
+[extruder]
+step_pin: PC2
+dir_pin: !PC1
+enable_pin: !PC3
+microsteps: 16
+rotation_distance: 38.55
+nozzle_diameter: 0.400
+filament_diameter: 1.750
+heater_pin: PH6
+sensor_type: ATC Semitec 104GT-2
+sensor_pin: PK5
+control = pid
+pid_kp = 27.402
+pid_ki = 1.194
+pid_kd = 157.221
+min_temp: 0
+max_temp: 250
+pressure_advance: 0.49
+
+[mcu]
+serial: /dev/serial/by-id/usb-FTDI_FT232R_USB_UART_AJ03K8TM-if00-port0
+baud: 250000
+restart_method: arduino
+
+
+[virtual_sdcard]
+path: ~/gcode_files
+
+[printer]
+kinematics: delta
+max_velocity: 300
+max_accel: 7000
+max_accel_to_decel: 7000
+max_z_velocity: 300
+delta_radius: 267.495157
+print_radius: 220
+
+[delta_calibrate]
+radius: 200
+speed: 50
+horizontal_move_z: 10
+
+[fan]
+pin: PH4
