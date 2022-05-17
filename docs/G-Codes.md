@@ -63,7 +63,7 @@ document, the commands and parameters are shown in uppercase, however
 they are not case sensitive. (So, "SET_SERVO" and "set_servo" both run
 the same command.)
 
-This section is organized my Klipper module name, which generally
+This section is organized by Klipper module name, which generally
 follows the section names specified in the
 [printer configuration file](Config_Reference.md). Note that some
 modules are automatically loaded.
@@ -861,7 +861,7 @@ Requires a `SAVE_CONFIG` to take effect.
 
 ### [query_adc]
 
-The query_endstops module is automatically loaded.
+The query_adc module is automatically loaded.
 
 #### QUERY_ADC
 `QUERY_ADC [NAME=<config_name>] [PULLUP=<value>]`: Report the last
